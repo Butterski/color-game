@@ -9,6 +9,7 @@
 ### Built With
 
 - [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 
 ## How To Use
