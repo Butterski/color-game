@@ -45,7 +45,7 @@ const App = () => {
     <div className="App">
       <div className="score-board">Score: {score}</div>
       <div className="color-square" style={{ background: goodColor }}>
-        {goodColor}
+        {/* {goodColor} */}
       </div>
       <div>
         {colors?.map((value: any, index: number) => {
