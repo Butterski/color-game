@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { Icon } from '@iconify/react';
 import { generateRandomColorCMYK, generateRandomColorHex, generateRandomColorHsla, generateRandomColorRGB } from './scripts/colorGenerators'
+import { cmykToHex } from "./scripts/cmykToRgb";
 
 const App = () => {
-  // const [hardModeOn, setHardModeOn] = useState<boolean>(false)
   const [activeMode, setActiveMode] = useState<string>('rgb')
   const [goodColor, setGoodColor] = useState<string>("");
   const [colors, setColors] = useState<any>();
   const [score, setScore] = useState<number>(0);
   const [topScore, setTopScore] = useState<number>(0);
   const [scoreColor, setScoreColor] = useState<string>("white");
+  const [debugMode, setDebugMode] = useState<boolean>(false)
 
   function setupGame() {
     let colours = [];
@@ -71,13 +73,20 @@ const App = () => {
     }
   }
 
+  function isCmyk(str: string){
+    return str.includes('cmyk')
+  }
+
   useEffect(() => {
     setupGame()
   }, [activeMode])
-  
 
   return (
     <div className="App">
+      <div className="options-menu">
+        <Icon className="options-menu-button" icon="carbon:restart" onClick={()=>setupGame()}/>
+        <Icon className="options-menu-button" icon="carbon:debug" style={debugMode ? {color: 'green'} : {color: 'white'}} onClick={()=>setDebugMode(!debugMode)}/>
+      </div>
       <div>
         <div className="score-board">High Score: {topScore}</div>
         <div className="score-board" style={{ color: scoreColor }}>
@@ -85,13 +94,13 @@ const App = () => {
         </div>
       </div>
       <div className="game-container">
-        <div className="color-square" style={{ background: goodColor }}>
-          {goodColor}
-        </div>
+        <div className="color-square" style={isCmyk(goodColor) ? { background: cmykToHex(goodColor)} : {background: goodColor}}>
+          {debugMode && goodColor}
+          </div>
         <div className="buttons-container">
           {colors?.map((value: any, index: number) => {
             return (
-              <button key={index} onClick={() => colorPick(value)} className="game-button">
+              <button key={index} onClick={() => colorPick(value)} className="game-button" style={debugMode ? (isCmyk(value) ? {background: cmykToHex(value)} : {background: value}) : {}}>
                 {value}
               </button>
             );
