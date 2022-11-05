@@ -1,3 +1,4 @@
+// turns out cmyk is not liked by css so you need to work around it
 // https://stackoverflow.com/questions/8869248/use-cmyk-on-web-page
 function cmyk2rgb(c: number,m: number,y: number,k: number) {
 
