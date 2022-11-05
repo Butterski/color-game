@@ -5,6 +5,7 @@
    Inspired by youtube video i never watched but seen a title <a href="https://www.youtube.com/watch?v=QNYljS0_TOE" target="_blank">video link</a>.
 </div>
 
+![screen](https://cdn.discordapp.com/attachments/963464951077421136/1038541194856251492/image.png)
 
 ### Built With
 
