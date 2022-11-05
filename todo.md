@@ -7,7 +7,7 @@
 - ~~debug mode~~
 - ~~restart button~~
 - ~~better cmyk support~~
-- showing good answer after clicking wrong
+- ~~showing good answer after clicking wrong~~
 
 
 
