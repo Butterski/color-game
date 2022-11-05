@@ -1,9 +1,12 @@
 # TODO
-- top scores
-- update css style
-- hard mode
-- - more options
-- - gradient
-- - rgb/hex/hsla randomly
-- speed mode?
+- ~~top scores~~
+- ~~update css style~~
+- ~~hard mode:~~
+- - ~~more options~~
+- - ~~rgb/hex/hsla randomly~~
+- showing good answer after clicking wrong
+- debug mode
+- restart button
+
+
 
