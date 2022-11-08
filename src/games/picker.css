@@ -1,0 +1,80 @@
+.Picker {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .score-board{
+    margin: 1rem;
+  }
+  .color-square{
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid black
+  }
+  .game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .game-button{
+    padding: 15px;
+    padding-inline: 25px;
+    margin: .75rem;
+    border: 1px solid black;
+    border-radius: 0.375rem;
+    font-size: 24px;
+  }
+  .game-button:hover{
+    background: darkgray;
+  }
+  .buttons-container{
+    display: grid;
+    grid-template-columns: auto 2fr;
+  }
+  .modes-buttons{
+    display: flex;
+    flex-direction: column;
+  }
+  .mode-button{
+    padding: 5px;
+    padding-inline: 25px;
+    margin: .3rem;
+    border: 1px solid black;
+    border-radius: 0.375rem;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .mode-button:hover{
+    background: darkgray;
+    cursor: pointer;
+  }
+  h3{
+    margin-block: 10px;
+  }
+  .options-menu{
+    border: 2px black solid;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    border-radius: .35rem;
+    display: flex;
+    padding: 8px;
+    background: #2d2f33;
+    box-shadow: black 1px 1px 3px;
+  }
+  
+  .options-menu-button{
+    margin-inline: .5rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  .options-menu-button:hover{
+    color: #c1c1c1;
+  }
