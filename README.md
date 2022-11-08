@@ -30,5 +30,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@your-username](https://github.com/Butterski)
+- GitHub [@butterski](https://github.com/Butterski)
 
