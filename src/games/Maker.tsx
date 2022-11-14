@@ -31,10 +31,15 @@ const Maker = () => {
     if(`rgb(${inputColor.r}, ${inputColor.g}, ${inputColor.b})` === goodColor){
       setWonGame(true)
     }
-    if (checkerVisisbility && wonGame) {
+    else if (checkerVisisbility) {
       tries <= 0 ? setLostGame(true) : setTries(tries - 1);
     }
   }, [checkerVisisbility]);
+
+  useEffect(() => {
+    setCheckerVisisbility(false)
+  }, [inputColor])
+  
 
   return (
     <div className="Maker">
