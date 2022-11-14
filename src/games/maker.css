@@ -1,10 +1,85 @@
-.Picker {
-    min-height: 100vh;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+.Maker {
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.options-menu {
+  border: 2px black solid;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  border-radius: 0.35rem;
+  display: flex;
+  padding: 8px;
+  background: #2d2f33;
+  box-shadow: black 1px 1px 3px;
+}
+
+.options-menu-button {
+  margin-inline: 0.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.options-menu-button:hover {
+  color: #c1c1c1;
+}
+.color-square {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputs-container {
+  display: flex;
+  margin: 1rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 10px;
+}
+.input-container input{
+  padding: .4rem;
+  font-size: 24px;
+  width: 100px;
+  font-weight: 600;
+  border: none;
+  background: rgb(255, 255, 255, 0.01);
+  border-bottom: double 2px black;
+  text-align: center;
+  color: white;
+}
+.input-container:active{
+  border: none;
+}
+.check-button{
+  padding: 5px;
+  padding-inline: 25px;
+  margin: .3rem;
+  border: 1px solid black;
+  border-radius: 0.375rem;
+  font-size: 20px;
+  font-weight: 600;
+}
+.input-color-square{
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid black;
+ display: none;
+}
